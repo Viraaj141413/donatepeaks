@@ -102,7 +102,6 @@
         <h3 style="color: #fff;">Choose your payment method:</h3>
         <button onclick="redirectToPayment('Paypal')">PayPal</button>
         <button onclick="redirectToPayment('BuyMeACoffee')">BuyMeACoffee</button>
-        <button onclick="redirectToPayment('Stripe')">Stripe</button>
         <button onclick="showApplePay()">Apple Pay</button>
     </div>
 
@@ -120,8 +119,6 @@
                 window.open("https://www.paypal.com/paypalme/shaloosingh913", "_blank");
             } else if (paymentMethod === 'BuyMeACoffee') {
                 window.open("https://buymeacoffee.com/viraaj", "_blank");
-            } else if (paymentMethod === 'Stripe') {
-                window.open("https://donate.stripe.com/28o4iLbh46da6xW144", "_blank");
             }
         }
 
