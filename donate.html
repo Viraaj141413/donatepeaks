@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Page</title>
+    <style>
+        body {
+            background-color: #121212; /* Dark background for contrast */
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 60px;
+            margin: 0;
+        }
+
+        .container {
+            margin-top: 100px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #ffd700; /* Gold color for the header */
+        }
+
+        .heartfelt-message {
+            font-size: 24px;
+            color: #f0a0d8; /* Soft pink color for the heartfelt message */
+            margin-bottom: 40px;
+            line-height: 1.5;
+            font-weight: 300;
+        }
+
+        .pay-button {
+            background-color: white;
+            color: #333;
+            border: 1px solid #f0a0d8; /* Soft pink border for elegance */
+            padding: 18px 40px;
+            font-size: 22px;
+            cursor: pointer;
+            border-radius: 50px; /* Rounded corners for buttons */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease-in-out;
+            margin: 10px;
+        }
+
+        .pay-button:hover {
+            transform: scale(1.05);
+            background-color: #f0a0d8;
+            color: white;
+        }
+
+        .payment-options {
+            display: none;
+            margin-top: 40px;
+        }
+
+        .payment-options button {
+            background-color: white;
+            color: #333;
+            border: 1px solid #f0a0d8;
+            padding: 16px 40px;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 50px;
+            margin: 10px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .payment-options button:hover {
+            transform: scale(1.05);
+            background-color: #f0a0d8;
+            color: white;
+        }
+
+        .footer {
+            margin-top: 50px;
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        .footer a {
+            color: #ffd700; /* Gold color for footer links */
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>❤️ Thank You for Your Support! ❤️</h1>
+    <div class="heartfelt-message">
+        Hello! I just want to say thank you if you're donating. This page is purely for support. 
+        Your generosity would truly make my day. Thank you so much!
+    </div>
+
+    <div class="container">
+        <button class="pay-button" onclick="showPaymentOptions()">Donate</button>
+    </div>
+
+    <div class="payment-options" id="paymentOptions">
+        <h3 style="color: #fff;">Choose your payment method:</h3>
+        <button onclick="redirectToPayment('Paypal')">PayPal</button>
+        <button onclick="redirectToPayment('BuyMeACoffee')">BuyMeACoffee</button>
+        <button onclick="redirectToPayment('Stripe')">Stripe</button>
+        <button onclick="showApplePay()">Apple Pay</button>
+    </div>
+
+    <div class="footer">
+        <p>For inquiries or more information, visit <a href="https://buymeacoffee.com/viraaj" target="_blank">BuyMeACoffee</a></p>
+    </div>
+
+    <script>
+        function showPaymentOptions() {
+            document.getElementById("paymentOptions").style.display = 'block';
+        }
+
+        function redirectToPayment(paymentMethod) {
+            if (paymentMethod === 'Paypal') {
+                window.open("https://www.paypal.com/paypalme/shaloosingh913", "_blank");
+            } else if (paymentMethod === 'BuyMeACoffee') {
+                window.open("https://buymeacoffee.com/viraaj", "_blank");
+            } else if (paymentMethod === 'Stripe') {
+                window.open("https://donate.stripe.com/28o4iLbh46da6xW144", "_blank");
+            }
+        }
+
+        function showApplePay() {
+            alert('Apple Pay integration is coming soon! Stay tuned!');
+        }
+    </script>
+
+</body>
+</html>
